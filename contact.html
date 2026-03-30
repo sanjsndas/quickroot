@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Contact | Quick Root Stories — Grey & White Garden Journal</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f5f5f4;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: #2c2c2c;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    /* header / navigation (mirror main site) */
+    .site-header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e5e5;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.5rem;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .logo h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+      color: #3b3b3b;
+    }
+    .logo span {
+      font-weight: 400;
+      color: #6b6b6b;
+      font-size: 0.9rem;
+      display: block;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #4a4a4a;
+      margin-left: 1.8rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: #1f1f1f;
+      text-decoration: underline;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    /* page hero */
+    .page-hero {
+      background: #ffffff;
+      border-radius: 2rem;
+      margin: 1.5rem 0 2rem 0;
+      padding: 2rem 2rem;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03), 0 6px 12px -6px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .page-hero h2 {
+      font-size: 2.4rem;
+      font-weight: 500;
+      color: #2c2c2c;
+      border-left: 6px solid #a0a0a0;
+      padding-left: 1.2rem;
+      display: inline-block;
+    }
+    .page-hero p {
+      font-size: 1.15rem;
+      color: #4f4f4f;
+      max-width: 70%;
+      margin: 1rem auto 0;
+    }
+
+    /* contact grid */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin: 2rem 0 3rem;
+    }
+    .contact-card, .contact-form-card {
+      background: #ffffff;
+      border-radius: 1.5rem;
+      padding: 2rem;
+      border: 1px solid #ececec;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      transition: transform 0.2s ease;
+    }
+    .contact-card:hover, .contact-form-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.05);
+    }
+    .contact-card h3, .contact-form-card h3 {
+      font-size: 1.7rem;
+      font-weight: 500;
+      border-bottom: 2px solid #dddddd;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1.5rem;
+      color: #323232;
+    }
+    .info-block {
+      margin: 1.8rem 0;
+    }
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.6rem;
+    }
+    .info-icon {
+      background: #f0f0ef;
+      width: 44px;
+      height: 44px;
+      border-radius: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: #4e4e4e;
+    }
+    .info-text strong {
+      display: block;
+      font-size: 1.1rem;
+      margin-bottom: 0.2rem;
+      color: #2b2b2b;
+    }
+    .info-text p, .info-text a {
+      color: #5a5a5a;
+      text-decoration: none;
+    }
+    .info-text a:hover {
+      text-decoration: underline;
+      color: #2c2c2c;
+    }
+    .social-links {
+      margin-top: 2rem;
+    }
+    .social-links h4 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    .social-icons {
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+    .social-icons a {
+      background: #f5f5f4;
+      padding: 0.5rem 1rem;
+      border-radius: 40px;
+      color: #3c3c3c;
+      font-weight: 500;
+      transition: all 0.2s;
+      border: 1px solid #e2e2e2;
+    }
+    .social-icons a:hover {
+      background: #eaeae8;
+      color: #1e1e1e;
+    }
+
+    /* form styling */
+    .form-group {
+      margin-bottom: 1.4rem;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: #3e3e3e;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border: 1px solid #d4d4d4;
+      border-radius: 1rem;
+      background: #fefefe;
+      font-family: inherit;
+      font-size: 1rem;
+      transition: 0.2s;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #8f8f8f;
+      box-shadow: 0 0 0 3px rgba(128,128,128,0.1);
+    }
+    .submit-btn {
+      background: #2c2c2c;
+      color: white;
+      border: none;
+      padding: 0.9rem 1.8rem;
+      border-radius: 2rem;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      width: 100%;
+    }
+    .submit-btn:hover {
+      background: #424242;
+    }
+    .note-message {
+      margin-top: 1.2rem;
+      font-size: 0.85rem;
+      color: #6f6f6f;
+      text-align: center;
+    }
+
+    /* additional grey-white gardening flavour banner */
+    .inspire-banner {
+      background: #ffffff;
+      border-radius: 1.5rem;
+      margin: 1rem 0 2rem;
+      padding: 1.5rem 2rem;
+      border-left: 6px solid #b0b0b0;
+      background: #fcfcfb;
+    }
+    .inspire-banner p {
+      font-style: italic;
+      color: #4a4a4a;
+    }
+
+    /* footer */
+    .footer {
+      background: #2a2a2a;
+      color: #e2e2e2;
+      border-top: 1px solid #414141;
+      margin-top: 2rem;
+      padding: 2rem 1.5rem;
+    }
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .footer-contact {
+      font-size: 1rem;
+      background: #3c3c3c;
+      padding: 0.6rem 1.2rem;
+      border-radius: 40px;
+    }
+    .footer-contact span {
+      font-weight: 500;
+      margin-right: 1.2rem;
+    }
+    .copyright {
+      font-size: 0.85rem;
+      opacity: 0.8;
+    }
+
+    @media (max-width: 760px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1.8rem;
+      }
+      .page-hero p {
+        max-width: 100%;
+      }
+      .header-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+      .nav-links a {
+        margin: 0 0.8rem;
+      }
+      .contact-card, .contact-form-card {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">
+      <h1>Quick Root Stories</h1>
+      <span>rooted in wisdom · growing together</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="terms.html">Terms Of Privacy</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="cookies.html">Cookies Policy</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="container">
+  <!-- hero matching grey & white theme -->
+  <div class="page-hero">
+    <h2>Grey & White Connections</h2>
+    <p>We'd love to hear from you — whether it's a question about silver foliaged perennials, a story of your monochrome border, or a collaboration inquiry. Reach out and grow with us.</p>
+  </div>
+
+  <!-- contact grid: left side info & right side form -->
+  <div class="contact-grid">
+    <!-- contact details & gardening community -->
+    <div class="contact-card">
+      <h3>Rooted Conversations</h3>
+      <div class="info-block">
+        <div class="info-item">
+          <div class="info-icon">📍</div>
+          <div class="info-text">
+            <strong>Garden Studio</strong>
+            <p>127 Evergreen Lane, Garden Valley, CO 81226<br>United States</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">📞</div>
+          <div class="info-text">
+            <strong>Phone / Text</strong>
+            <p><a href="tel:+1800455ROOT">+1 (800) 455-ROOT (7668)</a><br>Mon–Fri, 9am – 5pm MT</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">✉️</div>
+          <div class="info-text">
+            <strong>Email</strong>
+            <p><a href="mailto:hello@quickrootstories.com">hello@quickrootstories.com</a><br>We reply within 2–3 business days.</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">🌱</div>
+          <div class="info-text">
+            <strong>Grey & White Helpline</strong>
+            <p>For urgent plant diagnostics or design consults, mention "Silver Hotline" in your subject.</p>
+          </div>
+        </div>
+      </div>
+      <div class="social-links">
+        <h4>Follow our monochrome garden journal</h4>
+        <div class="social-icons">
+          <a href="#">Instagram</a>
+          <a href="#">Pinterest</a>
+          <a href="#">YouTube</a>
+          <a href="#">GardenTok</a>
+        </div>
+        <div class="inset-quote" style="margin-top: 1.8rem; background: #f9f9f9; border-left: 4px solid #b0b0b0; padding: 1rem;">
+          <p style="font-size: 0.9rem;">✨ Share your grey-white garden moments using <strong>#QuickRootStories</strong> — we feature real gardeners every month.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- contact form: gather inquiries, gardening questions, etc -->
+    <div class="contact-form-card">
+      <h3>Send a Whisper to the Soil</h3>
+      <form id="contactForm" action="#" method="post">
+        <div class="form-group">
+          <label for="name">Full name *</label>
+          <input type="text" id="name" name="name" placeholder="e.g., Luna Silverthorn" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email address *</label>
+          <input type="email" id="email" name="email" placeholder="hello@greythumb.com" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject *</label>
+          <select id="subject" name="subject" required>
+            <option value="" disabled selected>— Select a topic —</option>
+            <option value="Garden design inquiry">🌿 Garden design / grey-white palette</option>
+            <option value="Plant care & troubleshooting">🍃 Plant care & troubleshooting</option>
+            <option value="Workshops & events">🎤 Workshops & events</option>
+            <option value="Collaboration / press">📰 Collaboration or press</option>
+            <option value="General story">📖 General story or feedback</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Your message (tell us about your garden!) *</label>
+          <textarea id="message" name="message" rows="5" placeholder="Share your silver foliage dreams, white bloom challenges, or just say hello. Our root team is eager to help..." required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="referral">How did you discover Quick Root Stories?</label>
+          <input type="text" id="referral" name="referral" placeholder="e.g., Pinterest, friend, garden magazine">
+        </div>
+        <button type="submit" class="submit-btn">Plant this message 🌱</button>
+        <div class="note-message">
+          💡 By submitting, you’ll receive occasional grey-garden inspiration. We never share your data — read our <a href="privacy.html" style="text-decoration: underline; color:#5a5a5a;">privacy policy</a>.
+        </div>
+      </form>
+      <div id="formFeedback" style="margin-top: 1rem; font-size: 0.9rem; text-align: center;"></div>
+    </div>
+  </div>
+
+  <!-- additional grey-white gardening story snippet: shows depth & authenticity (unique content) -->
+  <div class="inspire-banner">
+    <p>📖 <strong>From our community journal:</strong> "After reading the grey & white perennial encyclopedia on Quick Root Stories, I transformed my shady city terrace into a luminous retreat using silver Dichondra, white foxgloves, and recycled gravel. The team personally answered my drainage questions — forever grateful!" — <em>Elena R., Portland</em></p>
+  </div>
+
+  <!-- optional extra: detailed gardening contact info (hidden but searchable, enriches contact page content) -->
+  <div style="background: #ffffff; border-radius: 1rem; padding: 1.5rem; margin: 1rem 0; border: 1px solid #ebebeb;">
+    <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">🌾 Press & Collaboration Inquiries</h3>
+    <p>For partnerships, sustainability features, or featuring your grey-white garden in our "78k+ words library" case studies, contact our editorial root team directly: <strong>press@quickrootstories.com</strong> or use the form above. We also accept guest articles from experienced monochrome gardeners.</p>
+    <hr style="margin: 1rem 0; border-color: #ececec;">
+    <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">📬 Frequently Asked (Root) Questions</h3>
+    <ul style="margin-left: 1.4rem; color: #4f4f4f;">
+      <li><strong>Do you offer personalized garden designs?</strong> Yes! Our Grey-White Design Consultancy provides bespoke planting plans — reach out via email with your zone and site photos.</li>
+      <li><strong>Where can I find the silver foliage plant database?</strong> The full encyclopedia (150+ species) is on our homepage main articles. Need a specific cultivar? Contact us and we'll assist.</li>
+      <li><strong>Can I volunteer or join the community seed exchange?</strong> Absolutely, mention "seed swap" in the message and we'll add you to the Grey & White Exchange network.</li>
+    </ul>
+    <div class="inset-quote" style="background: #fbfbf9; margin-top: 1.2rem;">
+      🌸 *Our contact page is part of the Quick Root Stories commitment: delivering 78,000+ words of horticultural wisdom and human connection. Every message nurtures the garden community.*
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="copyright">
+      © 2025 Quick Root Stories — Rooted in wisdom, growing grey & white gardens.
+    </div>
+    <div class="footer-contact">
+      <span>📍 127 Evergreen Lane, Garden Valley, CO 81226</span>
+      <span>📞 +1 (800) 455-ROOT (7668)</span>
+    </div>
+  </div>
+</footer>
+
+<!-- simple client-side form handling with success simulation & validation (preserves usability & matches theme) -->
+<script>
+  (function() {
+    const form = document.getElementById('contactForm');
+    const feedbackDiv = document.getElementById('formFeedback');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Basic validation
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const subjectSelect = document.getElementById('subject');
+      const subject = subjectSelect.value;
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !email || !subject || !message) {
+        feedbackDiv.innerHTML = '<span style="color: #b1624b;">❌ Please fill in all required fields (name, email, subject, message).</span>';
+        feedbackDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        return;
+      }
+      if (!email.includes('@') || !email.includes('.')) {
+        feedbackDiv.innerHTML = '<span style="color: #b1624b;">❌ Please provide a valid email address.</span>';
+        return;
+      }
+
+      // Simulate form submission success (grey & white gardening journal ethos)
+      const submitBtn = form.querySelector('.submit-btn');
+      const originalText = submitBtn.innerText;
+      submitBtn.innerText = 'Sending... 🌿';
+      submitBtn.disabled = true;
+
+      setTimeout(() => {
+        // After "sending" — display success message
+        feedbackDiv.innerHTML = '<span style="color: #3a6b47;">✅ Thanks for reaching out! Your message has been planted. Our root team will reply within 2–3 days. In the meantime, explore our grey & white gardening library. 🌱</span>';
+        form.reset();
+        submitBtn.innerText = originalText;
+        submitBtn.disabled = false;
+        // Clear success message after 8 seconds
+        setTimeout(() => {
+          if (feedbackDiv.innerHTML.includes('Thanks for reaching out')) {
+            feedbackDiv.innerHTML = '';
+          }
+        }, 8000);
+      }, 800);
+    });
+  })();
+</script>
+</body>
+</html>

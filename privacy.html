@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Privacy Policy | Quick Root Stories</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f5f5f4;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: #2c2c2c;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    /* header / navigation (mirroring main site) */
+    .site-header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e5e5;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.5rem;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .logo h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+      color: #3b3b3b;
+    }
+    .logo span {
+      font-weight: 400;
+      color: #6b6b6b;
+      font-size: 0.9rem;
+      display: block;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #4a4a4a;
+      margin-left: 1.2rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: #1f1f1f;
+      text-decoration: underline;
+    }
+
+    /* page hero (small variant) */
+    .page-hero {
+      background: #ffffff;
+      border-radius: 2rem;
+      margin: 1.5rem 0 2rem 0;
+      padding: 2rem 2rem;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03), 0 6px 12px -6px rgba(0,0,0,0.05);
+    }
+    .page-hero h2 {
+      font-size: 2.2rem;
+      font-weight: 500;
+      color: #2c2c2c;
+      border-left: 6px solid #a0a0a0;
+      padding-left: 1.2rem;
+    }
+    .page-hero p {
+      font-size: 1.1rem;
+      color: #4f4f4f;
+      margin-top: 1rem;
+    }
+
+    /* legal content styling */
+    .legal-content {
+      background: #ffffff;
+      border-radius: 1.5rem;
+      padding: 2rem 2rem;
+      border: 1px solid #ebebeb;
+      margin-bottom: 2rem;
+    }
+    .legal-content h2 {
+      font-size: 1.8rem;
+      margin: 1.5rem 0 1rem 0;
+      font-weight: 500;
+      color: #323232;
+      border-bottom: 2px solid #dddddd;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+    .legal-content h3 {
+      font-size: 1.4rem;
+      margin: 1.5rem 0 0.75rem 0;
+      color: #3e3e3e;
+    }
+    .legal-content p {
+      margin-bottom: 1rem;
+      color: #424242;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .legal-content ul, .legal-content ol {
+      margin: 1rem 0 1rem 1.8rem;
+      color: #424242;
+    }
+    .legal-content li {
+      margin-bottom: 0.4rem;
+    }
+    .inset-note {
+      background: #f9f9f9;
+      border-left: 6px solid #b0b0b0;
+      padding: 1rem 1.8rem;
+      margin: 1.5rem 0;
+      font-style: normal;
+      color: #4d4d4d;
+      border-radius: 0.75rem;
+    }
+    .last-updated {
+      font-size: 0.85rem;
+      color: #6b6b6b;
+      margin-top: 2rem;
+      border-top: 1px solid #ececec;
+      padding-top: 1.5rem;
+      text-align: right;
+    }
+    hr {
+      margin: 1rem 0;
+      border: none;
+      border-top: 1px solid #e2e2e2;
+    }
+    .back-link {
+      margin-top: 1rem;
+      display: inline-block;
+      font-size: 0.9rem;
+    }
+    .back-link a {
+      color: #4f4f4f;
+      text-decoration: underline;
+      font-weight: 500;
+    }
+
+    /* footer */
+    .footer {
+      background: #2a2a2a;
+      color: #e2e2e2;
+      border-top: 1px solid #414141;
+      margin-top: 3rem;
+      padding: 2rem 1.5rem;
+    }
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .footer-contact {
+      font-size: 1rem;
+      background: #3c3c3c;
+      padding: 0.6rem 1.2rem;
+      border-radius: 40px;
+    }
+    .footer-contact span {
+      font-weight: 500;
+      margin-right: 1.2rem;
+    }
+    .copyright {
+      font-size: 0.85rem;
+      opacity: 0.8;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    @media (max-width: 760px) {
+      .header-inner { flex-direction: column; text-align: center;}
+      .nav-links a { margin: 0 0.8rem; }
+      .legal-content { padding: 1.5rem; }
+      .page-hero { padding: 1.5rem; }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-contact span { display: block; margin: 0.3rem 0; }
+    }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">
+      <h1>Quick Root Stories</h1>
+      <span>rooted in wisdom · growing together</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="terms.html">Terms Of Service</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="cookies.html">Cookies Policy</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="container">
+  <div class="page-hero">
+    <h2>Privacy Policy</h2>
+    <p>Your trust grows with us, just like a well-tended garden. Quick Root Stories respects your privacy and is committed to protecting any personal data you share. This policy explains how we collect, use, and safeguard your information when you visit our website or engage with our community.</p>
+  </div>
+
+  <div class="legal-content">
+    <h2>1. Who We Are</h2>
+    <p>Quick Root Stories (“we”, “us”, “our”) operates the website quickrootstories.com and related services (collectively, the “Service”). We are a dedicated team of grey & white garden enthusiasts, writers, and horticulture lovers. For privacy-related matters, you can contact us at <strong>privacy@quickrootstories.com</strong> or via postal mail: 127 Evergreen Lane, Garden Valley, CO 81226, United States.</p>
+
+    <h2>2. Information We Collect</h2>
+    <p>We collect information to provide, improve, and personalize our content and gardening resources. The types of information we gather include:</p>
+    <ul>
+      <li><strong>Personal data you provide:</strong> When you subscribe to our newsletter, comment on articles, register for an event, or contact us directly, you may share your name, email address, location (optional), and any message content.</li>
+      <li><strong>Automated usage data:</strong> We automatically receive certain technical information when you visit, such as IP address, browser type, device identifiers, pages viewed, time spent, and referring URLs. This helps us understand how our community interacts with our grey-white garden guides and improve user experience.</li>
+      <li><strong>Cookies & similar technologies:</strong> We use cookies and local storage to remember preferences, analyze site traffic, and support essential functionality. For details, please see our <a href="cookies.html" style="text-decoration: underline; color:#4a4a4a;">Cookies Policy</a>.</li>
+    </ul>
+
+    <div class="inset-note">
+      🌱 <strong>Grey & white gardener’s promise:</strong> We never sell your personal information. Any data collected is used solely to nurture our community and deliver richer horticultural content.
+    </div>
+
+    <h2>3. Legal Basis for Processing (GDPR & CCPA Alignment)</h2>
+    <p>If you reside in the European Economic Area (EEA) or California, we process your personal data under the following lawful bases: your consent (e.g., newsletter sign-ups), performance of a contract (e.g., event registrations), compliance with legal obligations, and our legitimate interests in maintaining the Service, analyzing engagement, and preventing fraud. California residents have the right to know, delete, and opt out of the “sale” of personal information — we do not sell your data.</p>
+
+    <h2>4. How We Use Your Information</h2>
+    <p>Quick Root Stories uses collected data for the following purposes:</p>
+    <ul>
+      <li>To deliver, personalize, and improve our gardening articles, seasonal guides, and design inspiration (including over 78,000 words of original grey-white gardening knowledge).</li>
+      <li>To send newsletters, updates, and educational content related to white gardens, silver foliage, and timeless landscape tips — you may opt out at any time via the “unsubscribe” link.</li>
+      <li>To respond to inquiries, comments, or support requests.</li>
+      <li>To analyze usage patterns, track performance, and optimize site navigation.</li>
+      <li>To detect, prevent, and address technical or security issues.</li>
+    </ul>
+
+    <h2>5. Sharing & Disclosure of Information</h2>
+    <p>We do not sell, rent, or trade your personal data. Limited sharing occurs only in the following scenarios:</p>
+    <ul>
+      <li><strong>Service providers:</strong> Trusted third parties that help operate our website (e.g., hosting, analytics, email delivery). These parties are bound by data protection agreements and cannot use your information for any other purpose.</li>
+      <li><strong>Legal compliance:</strong> If required by law, court order, or governmental regulation, we may disclose information to protect our rights, safety, or the rights of our users.</li>
+      <li><strong>Business transfers:</strong> In the event of a merger, acquisition, or asset sale, your personal data may be transferred. We will notify you via prominent notice on our website.</li>
+    </ul>
+
+    <h2>6. Data Retention & Security</h2>
+    <p>We retain personal data only as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law. For newsletter subscribers, we keep your contact details until you unsubscribe. For security, we implement industry-standard measures — SSL encryption, firewalls, and restricted access — to safeguard your information. However, no method of transmission over the Internet is 100% secure, and we cannot guarantee absolute security.</p>
+
+    <h2>7. Your Privacy Rights & Choices</h2>
+    <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+    <ul>
+      <li><strong>Access & portability:</strong> Request a copy of the personal data we hold about you.</li>
+      <li><strong>Rectification:</strong> Correct inaccurate or incomplete information.</li>
+      <li><strong>Erasure (right to be forgotten):</strong> Request deletion of your data, subject to legal obligations.</li>
+      <li><strong>Restriction or objection:</strong> Limit how we process your data in certain circumstances.</li>
+      <li><strong>Withdraw consent:</strong> If processing is based on consent, you may withdraw at any time.</li>
+    </ul>
+    <p>To exercise these rights, email us at <strong>privacy@quickrootstories.com</strong>. We will respond within 30 days. We may ask for verification to protect your identity.</p>
+
+    <div class="inset-note">
+      📬 <strong>Email & communication transparency:</strong> We use a double opt-in for newsletters. You can manage your preferences or unsubscribe through the link at the bottom of every email. No spam — only stories rooted in the garden.
+    </div>
+
+    <h2>8. Children's Privacy</h2>
+    <p>Quick Root Stories is intended for general audiences and does not knowingly collect personal information from children under 13 years of age. If you are a parent or guardian and believe your child has provided us with personal data, please contact us immediately. We will take steps to delete such information promptly.</p>
+
+    <h2>9. International Data Transfers</h2>
+    <p>Our website is operated primarily from the United States. If you are accessing from outside the US, please be aware that your information may be transferred to, stored, and processed in the US where our servers and central database are located. By using the Service, you consent to the transfer of data to the US, which may have different data protection laws than your country.</p>
+
+    <h2>10. Third-Party Links & Embedded Content</h2>
+    <p>Our articles may contain links to external gardening suppliers, nurseries, or partner platforms. This Privacy Policy does not apply to third-party websites. We encourage you to review the privacy policies of any external sites you visit. We also may embed content (e.g., YouTube videos) that may set cookies according to the third party’s own policies.</p>
+
+    <h2>11. Changes to This Privacy Policy</h2>
+    <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for legal reasons. The “Last updated” date at the bottom indicates when the latest revision was made. We will notify you of material changes by placing a prominent notice on our website or via email, where appropriate. Your continued use of Quick Root Stories after any modifications constitutes acceptance of the revised policy.</p>
+
+    <h2>12. Contact Us & Data Protection Officer (DPO)</h2>
+    <p>If you have any questions, concerns, or requests regarding your privacy or this policy, please contact our privacy team:</p>
+    <ul>
+      <li>Email: <strong>privacy@quickrootstories.com</strong></li>
+      <li>Postal: 127 Evergreen Lane, Garden Valley, CO 81226, United States</li>
+      <li>Phone (toll-free): +1 (800) 455-ROOT (7668)</li>
+    </ul>
+    <p>For EU residents, you also have the right to lodge a complaint with your local data protection authority if you believe your rights have been infringed.</p>
+
+    <div class="inset-note">
+      🌸 <strong>Rooted in trust:</strong> Quick Root Stories is committed to cultivating a safe, inspiring environment for gardeners of all levels. Your privacy matters as much as the heritage seeds we celebrate.
+    </div>
+
+    <div class="last-updated">
+      Last updated: March 30, 2025 | Version 2.1 – Grey & White Privacy Edition
+    </div>
+
+    <div class="back-link">
+      <a href="index.html">← Back to Home</a> &nbsp;|&nbsp; <a href="cookies.html">See Cookies Policy</a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="copyright">
+      © 2025 Quick Root Stories — Rooted in wisdom, growing grey & white gardens.
+    </div>
+    <div class="footer-contact">
+      <span>📍 127 Evergreen Lane, Garden Valley, CO 81226</span>
+      <span>📞 +1 (800) 455-ROOT (7668)</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

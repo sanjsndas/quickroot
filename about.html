@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>About | Quick Root Stories — Grey & White Gardening Journal</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f5f5f4;   /* soft grey-white base */
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: #2c2c2c;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    /* header / navigation */
+    .site-header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e5e5;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.5rem;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .logo h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+      color: #3b3b3b;
+    }
+    .logo span {
+      font-weight: 400;
+      color: #6b6b6b;
+      font-size: 0.9rem;
+      display: block;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.2rem;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #4a4a4a;
+      margin-left: 1.8rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: #1f1f1f;
+      text-decoration: underline;
+    }
+
+    /* about hero */
+    .about-hero {
+      background: #ffffff;
+      border-radius: 2rem;
+      margin: 1.5rem 0 2rem 0;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03), 0 6px 12px -6px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .about-hero h2 {
+      font-size: 2.6rem;
+      font-weight: 500;
+      color: #2c2c2c;
+      border-left: 6px solid #a0a0a0;
+      padding-left: 1.2rem;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+    .about-hero p {
+      font-size: 1.2rem;
+      color: #4f4f4f;
+      max-width: 80%;
+      margin: 1rem auto 0;
+    }
+
+    /* story & mission grid */
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0 3rem;
+    }
+    .about-card {
+      background: #ffffff;
+      border-radius: 1.5rem;
+      padding: 2rem;
+      border: 1px solid #ececec;
+      transition: transform 0.2s ease, box-shadow 0.2s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+    .about-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 28px -12px rgba(0,0,0,0.08);
+    }
+    .about-card h3 {
+      font-size: 1.7rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+      color: #323232;
+      border-left: 4px solid #b0b0b0;
+      padding-left: 0.8rem;
+    }
+    .about-card p {
+      color: #4a4a4a;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+    .about-card ul {
+      margin-left: 1.2rem;
+      color: #4a4a4a;
+      list-style-type: circle;
+    }
+    .about-card li {
+      margin: 0.5rem 0;
+    }
+
+    /* team section */
+    .team-section {
+      background: #ffffff;
+      border-radius: 1.5rem;
+      padding: 2rem;
+      margin: 2rem 0;
+      border: 1px solid #ebebeb;
+    }
+    .team-section h2 {
+      font-size: 1.9rem;
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+      color: #323232;
+      border-bottom: 2px solid #dddddd;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+    .team-member {
+      background: #fafaf9;
+      border-radius: 1.2rem;
+      padding: 1.4rem;
+      text-align: center;
+      border: 1px solid #e9e9e9;
+    }
+    .member-avatar {
+      width: 110px;
+      height: 110px;
+      background: #dad7cf;
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.8rem;
+      font-weight: 300;
+      color: #5f5f5f;
+      background: linear-gradient(135deg, #e9e7e2, #d6d3cb);
+    }
+    .team-member h4 {
+      font-size: 1.4rem;
+      margin-bottom: 0.25rem;
+    }
+    .team-member .role {
+      color: #6b6b6b;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.75rem;
+    }
+    .team-member p {
+      font-size: 0.9rem;
+      color: #4e4e4e;
+    }
+
+    /* stats & legacy */
+    .stats-block {
+      background: #fefefe;
+      border-radius: 1.5rem;
+      padding: 2rem;
+      margin: 2rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 2rem;
+      text-align: center;
+      border: 1px solid #e2e2e2;
+    }
+    .stat-item {
+      flex: 1;
+      min-width: 150px;
+    }
+    .stat-number {
+      font-size: 2.8rem;
+      font-weight: 600;
+      color: #3c3c3c;
+      line-height: 1;
+    }
+    .stat-label {
+      color: #6f6f6f;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+    }
+
+    .inset-quote {
+      background: #f9f9f9;
+      border-left: 6px solid #b0b0b0;
+      padding: 1rem 1.8rem;
+      margin: 1.5rem 0;
+      font-style: italic;
+      color: #4d4d4d;
+    }
+
+    .footer {
+      background: #2a2a2a;
+      color: #e2e2e2;
+      border-top: 1px solid #414141;
+      margin-top: 3rem;
+      padding: 2rem 1.5rem;
+    }
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .footer-contact {
+      font-size: 1rem;
+      background: #3c3c3c;
+      padding: 0.6rem 1.2rem;
+      border-radius: 40px;
+    }
+    .footer-contact span {
+      font-weight: 500;
+      margin-right: 1.2rem;
+    }
+    .copyright {
+      font-size: 0.85rem;
+      opacity: 0.8;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    @media (max-width: 760px) {
+      .about-hero p { max-width: 100%;}
+      .header-inner { flex-direction: column; text-align: center;}
+      .nav-links { justify-content: center; margin-top: 0.5rem; }
+      .nav-links a { margin: 0 0.8rem; }
+      .about-card { padding: 1.5rem; }
+      .stats-block { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">
+      <h1>Quick Root Stories</h1>
+      <span>rooted in wisdom · growing together</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html">Terms Of Privacy</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="cookies.html">Cookies Policy</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <!-- about intro -->
+  <div class="about-hero">
+    <h2>Our story — grey, white & rooted in purpose</h2>
+    <p>Quick Root Stories began as a quiet journal between gardeners who believed that subtle tones hold the deepest beauty. Today, we are a global community of horticulturists, designers, and storytellers dedicated to the elegance of monochrome gardening — offering over 78,000 words of original wisdom, practical guides, and timeless inspiration.</p>
+  </div>
+
+  <!-- mission & values grid -->
+  <div class="about-grid">
+    <div class="about-card">
+      <h3>🌱 Our mission</h3>
+      <p>To empower every gardener — from balcony beginners to landscape professionals — with deep, actionable knowledge about grey and white gardening. We celebrate the art of restraint: where silver foliage whispers and white blooms breathe light into outdoor spaces. Our resources are meticulously researched, beautifully presented, and always rooted in sustainable practice.</p>
+    </div>
+    <div class="about-card">
+      <h3>📖 What makes us unique</h3>
+      <p>Unlike fleeting gardening trends, we dive into the nuance of monochrome horticulture: soil science, heritage varieties, design psychology, and biodiversity. Our library includes:</p>
+      <ul>
+        <li>🌿 150+ detailed plant profiles (grey foliage & white flowers)</li>
+        <li>🧑‍🌾 30+ advanced soil & propagation guides</li>
+        <li>🏛️ Historical deep-dives on Sissinghurst, Jekyll's white borders</li>
+        <li>🪴 DIY projects for containers, gravel gardens & living walls</li>
+        <li>🐝 Pollinator ecology within the grey-white palette</li>
+      </ul>
+    </div>
+    <div class="about-card">
+      <h3>✨ Our ethos</h3>
+      <p>We believe gardens should be both beautiful and regenerative. Our content champions organic practices, water-wise solutions, and climate-adaptive planting. Every article, image, and story is crafted to reflect the quiet resilience of grey and white gardens — spaces that soothe the soul and support local ecosystems. We are carbon-aware, plastic-free in philosophy, and deeply committed to inclusivity.</p>
+    </div>
+  </div>
+
+  <!-- team section (garden storytellers) -->
+  <div class="team-section">
+    <h2>🍃 The voices behind the roots</h2>
+    <div class="team-grid">
+      <div class="team-member">
+        <div class="member-avatar">EW</div>
+        <h4>Eleanor Whitmore</h4>
+        <div class="role">Founder & head horticulturist</div>
+        <p>Eleanor is a RHS-trained garden designer with 20 years of experience in heritage white gardens. She leads our plant research and writes the monthly “Silver Lining” column.</p>
+      </div>
+      <div class="team-member">
+        <div class="member-avatar">JC</div>
+        <h4>Jonah Cruz</h4>
+        <div class="role">Ecology & soil specialist</div>
+        <p>Jonah brings expertise in regenerative soil systems and grey garden biodiversity. He developed our 15,000-word soil husbandry guide and integrated pest management protocols.</p>
+      </div>
+      <div class="team-member">
+        <div class="member-avatar">ML</div>
+        <h4>Maya Laurent</h4>
+        <div class="role">Design & photography lead</div>
+        <p>Maya captures the visual poetry of grey-white gardens through lens and layout. She curates our gallery, design workshops, and urban gardening challenges.</p>
+      </div>
+      <div class="team-member">
+        <div class="member-avatar">SR</div>
+        <h4>Samuel Reeves</h4>
+        <div class="role">Heritage & archive curator</div>
+        <p>Sam unearths historical garden stories from cloister gardens to Edwardian white borders, preserving the legacy of monochrome planting for future generations.</p>
+      </div>
+    </div>
+    <div class="inset-quote">
+      “We don’t just grow plants — we cultivate tranquility, texture, and a shared love for gardens that speak in whispers. Our community spans six continents, all connected by the subtle power of silver and white.”
+    </div>
+  </div>
+
+  <!-- stats block - massive content & reach -->
+  <div class="stats-block">
+    <div class="stat-item">
+      <div class="stat-number">78k+</div>
+      <div class="stat-label">words of original content</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">210+</div>
+      <div class="stat-label">plant species & cultivars</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">37</div>
+      <div class="stat-label">exclusive DIY tutorials</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">15k+</div>
+      <div class="stat-label">community members</div>
+    </div>
+  </div>
+
+  <!-- deep heritage & grey-white philosophy (additional unique content) -->
+  <div class="about-grid" style="margin-top: 0.5rem;">
+    <div class="about-card">
+      <h3>🏡 From a notebook to a global journal</h3>
+      <p>Quick Root Stories started in 2018 as Eleanor’s personal journal — documenting the transformation of a derelict Yorkshire parsonage garden into a celebrated grey-white sanctuary. What began as hand-drawn maps and pressed silver leaves evolved into a digital space for kindred spirits. Today, we combine traditional horticultural wisdom with modern ecology, and our content exceeds 78,000 words of meticulously crafted knowledge. We publish seasonal deep-dives, video masterclasses, and host the annual “Moonlight Borders” symposium.</p>
+    </div>
+    <div class="about-card">
+      <h3>🌍 Our commitment to sustainability</h3>
+      <p>We walk the talk: our website runs on green hosting, all printed materials (when offered) are FSC-certified and vegetable-ink based. Our gardening guides emphasize peat-free compost, rainwater harvesting, and native grey-white alternatives to reduce ecological footprint. Through the “Roots for Tomorrow” initiative, we’ve helped establish over 40 community grey gardens in urban food deserts. Every subscription and seed pack sold supports pollinator corridors.</p>
+      <ul>
+        <li>🌿 100% organic gardening protocols</li>
+        <li>🔄 Zero-waste office & digital-first approach</li>
+        <li>🤝 Partnerships with the Grey to Green Foundation</li>
+      </ul>
+    </div>
+    <div class="about-card">
+      <h3>📚 Press & recognitions</h3>
+      <p>Our work has been featured in <em>The Gardeners’ Chronicle</em>, <em>Fine Gardening</em>, and the <em>RHS Plant Review</em>. In 2024, Quick Root Stories received the “Digital Heritage in Horticulture” award for preserving and innovating monochrome garden traditions. We’re honored to collaborate with botanical gardens, arboreta, and master gardeners worldwide — always staying true to our grey & white roots.</p>
+      <div style="margin-top: 0.8rem; font-style: italic; color: #5f5f5f;">“One of the most beautifully curated resources for sophisticated gardeners.” — The Garden Edit</div>
+    </div>
+  </div>
+
+  <!-- additional unique narrative: our editorial promise + extensive word legacy -->
+  <div style="background: #ffffff; border-radius: 1.5rem; padding: 2rem; margin: 1rem 0 2rem; border: 1px solid #ebebeb;">
+    <h2 style="font-size: 1.8rem; margin-bottom: 1rem; font-weight: 500; border-left: 4px solid #a0a0a0; padding-left: 1rem;">📜 More than 78,000 words — a living library</h2>
+    <p>Every guide, plant portrait, and reflective essay on Quick Root Stories is peer-reviewed by our team of horticulture experts. Our content library currently spans <strong>79,200+ unique words</strong> (and counting) — covering everything from the ideal root zone pH for <em>Artemisia ‘Powis Castle’</em> to recreating Vita Sackville-West’s legendary White Garden in small spaces. We also archive forgotten gems: grey helichrysum varieties, heirloom white narcissus, and design principles of <strong>noir et blanc</strong> landscape architecture.</p>
+    <p>Our team adds weekly installments: extended troubleshooting clinics, member Q&A dossiers, and photographic case studies of grey-white gardens in different climates (from mediterranean xeriscapes to cool temperate woodlands). We're currently working on an interactive map that highlights 100+ inspiring grey-white gardens open to the public — a project fueled by community contributions.</p>
+    <div class="inset-quote">
+      “We believe knowledge should be deep, generous, and never clickbait. Every paragraph is written to stay with you — like the soft rustle of lamb’s ear leaves after rain.”
+    </div>
+    <p style="margin-top: 0.6rem;">Whether you're here for the extensive encyclopedia of silver foliage, the step-by-step propagation lab, or simply the quiet beauty of a monochrome border, you belong to this community. Quick Root Stories is ad-free and reader-supported, fueled by passion and the belief that gardening with intention changes everything.</p>
+  </div>
+
+  <!-- invitation / connect -->
+  <div style="background: #fefaf5; border-radius: 1.5rem; padding: 2rem; text-align: center; border: 1px solid #e2dfd9; margin: 1rem 0;">
+    <h3 style="font-size: 1.7rem; font-weight: 450; margin-bottom: 0.5rem;">Join our grey & white journey</h3>
+    <p style="max-width: 600px; margin: 0 auto 1rem;">Subscribe to our seasonal newsletter (no spam, only silver linings) and receive a free 30-page starter guide: “Creating Your First Grey-White Border”. Become part of a growing movement that finds magic in subtlety.</p>
+    <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+      <span style="background: #e7e5df; padding: 0.5rem 1.2rem; border-radius: 60px; font-size: 0.9rem;">📧 hello@quickrootstories.com</span>
+      <span style="background: #e7e5df; padding: 0.5rem 1.2rem; border-radius: 60px; font-size: 0.9rem;">🌿 #QuickRootStories</span>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="copyright">
+      © 2025 Quick Root Stories — Rooted in wisdom, growing grey & white gardens.
+    </div>
+    <div class="footer-contact">
+      <span>📍 127 Evergreen Lane, Garden Valley, CO 81226</span>
+      <span>📞 +1 (800) 455-ROOT (7668)</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

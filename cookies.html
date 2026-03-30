@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Cookies Policy | Quick Root Stories — Grey & White Garden Journal</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f5f5f4;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: #2c2c2c;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    /* header / navigation (mirror main site) */
+    .site-header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e5e5;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.5rem;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .logo h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+      color: #3b3b3b;
+    }
+    .logo span {
+      font-weight: 400;
+      color: #6b6b6b;
+      font-size: 0.9rem;
+      display: block;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #4a4a4a;
+      margin-left: 1.8rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: #1f1f1f;
+      text-decoration: underline;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    /* page hero & cookie consent banner simulation */
+    .page-hero {
+      background: #ffffff;
+      border-radius: 2rem;
+      margin: 1.5rem 0 2rem 0;
+      padding: 2rem 2rem;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03), 0 6px 12px -6px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .page-hero h2 {
+      font-size: 2.4rem;
+      font-weight: 500;
+      color: #2c2c2c;
+      border-left: 6px solid #a0a0a0;
+      padding-left: 1.2rem;
+      display: inline-block;
+    }
+    .page-hero p {
+      font-size: 1.15rem;
+      color: #4f4f4f;
+      max-width: 70%;
+      margin: 1rem auto 0;
+    }
+
+    /* main content card */
+    .policy-card {
+      background: #ffffff;
+      border-radius: 1.8rem;
+      padding: 2rem 2rem;
+      border: 1px solid #ececec;
+      box-shadow: 0 12px 28px -8px rgba(0,0,0,0.04);
+      margin-bottom: 2rem;
+    }
+
+    .policy-card h3 {
+      font-size: 1.7rem;
+      font-weight: 500;
+      color: #323232;
+      margin-top: 1.8rem;
+      margin-bottom: 0.8rem;
+      border-left: 4px solid #b0b0b0;
+      padding-left: 1rem;
+    }
+    .policy-card h3:first-of-type {
+      margin-top: 0;
+    }
+    .policy-card h4 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 1.4rem 0 0.6rem;
+      color: #3a3a3a;
+    }
+    .policy-card p, .policy-card li {
+      color: #4a4a4a;
+      margin-bottom: 1rem;
+    }
+    .policy-card ul, .policy-card ol {
+      margin-left: 1.8rem;
+      margin-bottom: 1.2rem;
+    }
+    .policy-card li {
+      margin-bottom: 0.4rem;
+    }
+    .highlight-box {
+      background: #f9f9f8;
+      border-left: 5px solid #9c9c9c;
+      padding: 1.2rem 1.6rem;
+      border-radius: 1rem;
+      margin: 1.5rem 0;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #e2e2e2;
+      margin: 1.5rem 0;
+    }
+    .cookie-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.2rem 0;
+      background: #fefefc;
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+    .cookie-table th, .cookie-table td {
+      border: 1px solid #e6e6e6;
+      padding: 0.8rem 1rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .cookie-table th {
+      background-color: #f2f2f0;
+      font-weight: 600;
+      color: #2c2c2c;
+    }
+    .badge {
+      background: #ecece9;
+      padding: 0.2rem 0.6rem;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      display: inline-block;
+      margin-right: 0.5rem;
+      color: #3b3b3b;
+    }
+    .consent-manage {
+      background: #ffffff;
+      border-radius: 1.2rem;
+      margin-top: 2rem;
+      padding: 1.5rem;
+      border: 1px solid #dcdcdc;
+      text-align: center;
+    }
+    .btn-cookie {
+      background: #2c2c2c;
+      color: white;
+      border: none;
+      padding: 0.7rem 1.8rem;
+      border-radius: 2rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin: 0.5rem;
+      font-size: 0.9rem;
+    }
+    .btn-cookie:hover {
+      background: #4a4a4a;
+    }
+    .btn-outline {
+      background: transparent;
+      border: 1px solid #acacac;
+      color: #3b3b3b;
+    }
+    .btn-outline:hover {
+      background: #f0f0ee;
+    }
+
+    /* footer */
+    .footer {
+      background: #2a2a2a;
+      color: #e2e2e2;
+      border-top: 1px solid #414141;
+      margin-top: 2rem;
+      padding: 2rem 1.5rem;
+    }
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .footer-contact {
+      font-size: 1rem;
+      background: #3c3c3c;
+      padding: 0.6rem 1.2rem;
+      border-radius: 40px;
+    }
+    .footer-contact span {
+      font-weight: 500;
+      margin-right: 1.2rem;
+    }
+    .copyright {
+      font-size: 0.85rem;
+      opacity: 0.8;
+    }
+
+    @media (max-width: 760px) {
+      .page-hero p {
+        max-width: 100%;
+      }
+      .header-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+      .nav-links a {
+        margin: 0 0.8rem;
+      }
+      .policy-card {
+        padding: 1.5rem;
+      }
+      .cookie-table th, .cookie-table td {
+        padding: 0.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">
+      <h1>Quick Root Stories</h1>
+      <span>rooted in wisdom · growing together</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="terms.html">Terms Of Privacy</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="cookies.html">Cookies Policy</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="container">
+  <div class="page-hero">
+    <h2>Grey & White Cookie Stewardship</h2>
+    <p>We use cookies to cultivate a better browsing experience — just like we tend to silver-leaved perennials. Learn how we nourish your privacy while you explore our monochrome garden world.</p>
+  </div>
+
+  <div class="policy-card">
+    <h3>🌱 Our approach to cookies</h3>
+    <p>At <strong>Quick Root Stories</strong>, we believe in transparency that mirrors the clean simplicity of grey and white gardens. Cookies help us understand how visitors interact with our plant guides, design journals, and the 78k+ words of horticultural wisdom. This policy explains what cookies are, which ones we use, and how you can manage them.</p>
+    
+    <div class="highlight-box">
+      <p>✨ <strong>Rooted promise:</strong> We never sell your data. Any cookie information is used exclusively to improve our content, remember your preferences (like garden zone or language), and deliver a seamless grey-white gardening experience.</p>
+    </div>
+
+    <h3>🍪 What are cookies?</h3>
+    <p>Cookies are small text files placed on your device when you visit a website. They act like little seeds that store useful information — from remembering your favorite silver foliage articles to helping us analyze which stories resonate with our community. Cookies are not harmful and do not contain viruses.</p>
+
+    <h3>📋 Types of cookies we use</h3>
+    <p>Our garden journal uses a careful selection of cookies, each with a specific purpose. Below is the full list:</p>
+
+    <table class="cookie-table">
+      <thead>
+        <tr><th>Cookie Category</th><th>Name / Provider</th><th>Purpose</th><th>Duration</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="badge">Essential</span></td><td>session_id, csrf_token (Quick Root Stories)</td><td>Necessary for website functionality: keeping you logged in (if applicable), securing forms, and remembering cookie consent choices.</td><td>Session / 1 year</td></tr>
+        <tr><td><span class="badge">Preference</span></td><td>garden_zone_pref, theme_mode</td><td>Stores your preferred hardiness zone, grey-white display mode, or reading font size to personalize your journey.</td><td>6 months</td></tr>
+        <tr><td><span class="badge">Analytics</span></td><td>_ga, _gid (Google Analytics anonymized)</td><td>Helps us understand which articles (like "Drought-Tolerant Silver Perennials") are most loved, so we can grow more useful content.</td><td>14 months (aggregated & anonymized)</td></tr>
+        <tr><td><span class="badge">Performance</span></td><td>quickroot_perf</td><td>Measures site speed and interaction patterns to ensure our grey & white design loads beautifully on all devices.</td><td>30 days</td></tr>
+        <tr><td><span class="badge">Optional / Social</span></td><td>social_sharing (only when you interact)</td><td>Allows easy sharing of our garden stories on Pinterest, Instagram — activated only when you click share buttons.</td><td>Session</td></tr>
+      </tbody>
+    </table>
+
+    <h3>🤝 Third-party cookies & gardening partners</h3>
+    <p>We occasionally embed content from trusted partners such as YouTube (for our virtual garden tours) and Pinterest (for mood boards). These platforms may set their own cookies according to their policies. We only use these to enrich your experience with videos about white garden designs or grey foliage inspiration. You can block these via browser settings.</p>
+
+    <h3>⚙️ How to manage or disable cookies</h3>
+    <p>You are always in control. Most browsers allow you to refuse cookies or delete existing ones. Below are quick links to adjust settings for the most popular browsers:</p>
+    <ul>
+      <li><a href="#" style="color:#5a5a5a;">Google Chrome settings</a> — Manage cookies from 'Privacy and Security' section.</li>
+      <li><a href="#" style="color:#5a5a5a;">Safari (macOS/iOS)</a> — Prevent cross-site tracking & block all cookies.</li>
+      <li><a href="#" style="color:#5a5a5a;">Firefox</a> — Enhanced Tracking Protection.</li>
+      <li><a href="#" style="color:#5a5a5a;">Microsoft Edge</a> — Site permissions.</li>
+    </ul>
+    <p>Please note that disabling essential cookies may affect core functionality, such as submitting contact forms or accessing the grey-white plant database. But your reading experience will remain mostly intact.</p>
+
+    <h3>🌿 Cookie consent & your choices</h3>
+    <p>When you first visit Quick Root Stories, you'll see a subtle consent banner (aligned with our grey & white aesthetic) asking for your permission. You can change your mind at any time using the "Cookie Preferences" button below.</p>
+    
+    <div class="consent-manage" id="cookieConsentPanel">
+      <p><strong>🍃 Manage your cookie preferences anytime</strong><br>Your current status: <span id="cookieStatusDisplay">consent not yet recorded</span></p>
+      <button class="btn-cookie" id="acceptEssentialBtn">✅ Accept only essential</button>
+      <button class="btn-cookie" id="acceptAllBtn">🌱 Accept all cookies (recommended for full experience)</button>
+      <button class="btn-cookie btn-outline" id="resetCookiesBtn">🗑️ Reset / decline optional</button>
+    </div>
+
+    <h3>📅 Updates to this Cookies Policy</h3>
+    <p>We may revise this policy occasionally to reflect new gardening features or legal requirements. The "Last updated" date below will always indicate the latest version. We encourage you to review it periodically — just like checking on your lavender cotton plants.</p>
+    <p><strong>Last updated:</strong> March 30, 2026 — Grey & White Edition v2.1</p>
+    <hr>
+    <h3>🌾 More about your privacy & our values</h3>
+    <p>Our commitment to a safe digital garden extends beyond cookies. Read our <a href="privacy.html" style="color:#5a5a5a; text-decoration:underline;">Privacy Policy</a> and <a href="terms.html" style="color:#5a5a5a; text-decoration:underline;">Terms of Service</a> for details on data protection, GDPR compliance, and how we respect your digital footprint. For any questions, our root team is always available at <a href="mailto:privacy@quickrootstories.com" style="color:#5a5a5a;">privacy@quickrootstories.com</a> or via our <a href="contact.html" style="color:#5a5a5a;">contact page</a>.</p>
+    <div class="highlight-box" style="margin-bottom:0;">
+      <p>🌸 <strong>Rooted in trust:</strong> Quick Root Stories is a participant in the Grey & White Gardener's Alliance, committed to ethical data stewardship. Our cookies never track sensitive information — we only gather insights to help you grow better.</p>
+    </div>
+  </div>
+
+  <!-- additional interactive gardening FAQ snippet -->
+  <div style="background: #ffffff; border-radius: 1.5rem; padding: 1.5rem; border: 1px solid #ececec; margin-top: 0.5rem;">
+    <h3 style="font-size: 1.3rem; margin-bottom: 0.8rem;">❓ Frequently asked: Cookies edition</h3>
+    <div style="display: grid; gap: 1rem;">
+      <div><strong>Do cookies help me remember my favorite silver plants?</strong><br>Yes! Preference cookies store your favorite plant lists and recently viewed grey-foliage profiles so you can pick up where you left off.</div>
+      <div><strong>Will you use cookies to show me ads?</strong><br>No intrusive advertising. We never sell data for ad targeting. Any analytics are strictly to improve our free gardening journal.</div>
+      <div><strong>Can I still browse without analytics cookies?</strong><br>Absolutely. Essential cookies remain active for basic site functions, but you can disable analytics and optional cookies via the manage button above or browser settings.</div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="copyright">
+      © 2025 Quick Root Stories — Rooted in wisdom, growing grey & white gardens.
+    </div>
+    <div class="footer-contact">
+      <span>📍 127 Evergreen Lane, Garden Valley, CO 81226</span>
+      <span>📞 +1 (800) 455-ROOT (7668)</span>
+    </div>
+  </div>
+</footer>
+
+<!-- interactive cookie preference simulation (matches grey-white theme + store in localStorage to mimic real consent management) -->
+<script>
+  (function() {
+    // Helper: get stored consent level (null = no decision yet, 'essential' or 'all')
+    function getStoredConsent() {
+      return localStorage.getItem('quickroot_cookie_consent');
+    }
+
+    function updateUI(consentLevel) {
+      const statusSpan = document.getElementById('cookieStatusDisplay');
+      if (!statusSpan) return;
+      if (consentLevel === 'all') {
+        statusSpan.innerHTML = '✅ All cookies enabled (analytics + preferences + essentials) — you enjoy the full grey-white experience.';
+        statusSpan.style.color = '#3a6b47';
+      } else if (consentLevel === 'essential') {
+        statusSpan.innerHTML = '🔒 Essential cookies only. Optional/analytics cookies are disabled. Your privacy is respected.';
+        statusSpan.style.color = '#7a5a4b';
+      } else {
+        statusSpan.innerHTML = '⚪ No consent given yet. Default essential cookies are active for basic functionality.';
+        statusSpan.style.color = '#7f7f7f';
+      }
+      // you could also trigger a custom event for actual cookie setting simulation
+      console.log(`[QuickRoot Stories] Cookie consent level: ${consentLevel || 'none (essential only by law)'}`);
+    }
+
+    function setConsent(level) {
+      if (level === 'all') {
+        localStorage.setItem('quickroot_cookie_consent', 'all');
+        // simulate enabling analytics (in real world you'd load GA scripts etc)
+        if (typeof gtag === 'undefined') {
+          // just for demo — show a friendly console note
+          console.log('🌿 Analytics and performance cookies would be activated now.');
+        }
+      } else if (level === 'essential') {
+        localStorage.setItem('quickroot_cookie_consent', 'essential');
+        console.log('🌱 Only essential cookies active — no tracking.');
+      } else {
+        localStorage.removeItem('quickroot_cookie_consent');
+      }
+      updateUI(getStoredConsent());
+      // additional visual feedback for user
+      showToastMessage(level);
+    }
+
+    function showToastMessage(level) {
+      let msg = '';
+      if (level === 'all') msg = '🍪 You accepted all cookies! Your grey & white garden journey is now personalized.';
+      else if (level === 'essential') msg = '🌾 Essential cookies only. Analytics and optional features are off. You can change anytime.';
+      else msg = 'Cookie preferences reset. Only strictly necessary cookies remain.';
+      // create temporary floating message (lightweight)
+      const toast = document.createElement('div');
+      toast.innerText = msg;
+      toast.style.position = 'fixed';
+      toast.style.bottom = '20px';
+      toast.style.left = '20px';
+      toast.style.right = '20px';
+      toast.style.maxWidth = '360px';
+      toast.style.backgroundColor = '#2c2c2c';
+      toast.style.color = '#f0f0ef';
+      toast.style.padding = '12px 20px';
+      toast.style.borderRadius = '40px';
+      toast.style.fontSize = '0.85rem';
+      toast.style.zIndex = '9999';
+      toast.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+      toast.style.borderLeft = '4px solid #b0b0b0';
+      document.body.appendChild(toast);
+      setTimeout(() => { toast.style.opacity = '0'; toast.style.transition = 'opacity 0.4s'; setTimeout(() => toast.remove(), 500); }, 3500);
+    }
+
+    // event listeners for buttons
+    const acceptEssentialBtn = document.getElementById('acceptEssentialBtn');
+    const acceptAllBtn = document.getElementById('acceptAllBtn');
+    const resetBtn = document.getElementById('resetCookiesBtn');
+
+    if (acceptEssentialBtn) {
+      acceptEssentialBtn.addEventListener('click', () => setConsent('essential'));
+    }
+    if (acceptAllBtn) {
+      acceptAllBtn.addEventListener('click', () => setConsent('all'));
+    }
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => setConsent(null));
+    }
+
+    // initial load: display current consent status
+    const current = getStoredConsent();
+    updateUI(current);
+    
+    // for demo transparency: show initial message if not set
+    if (!current) {
+      // Optional: we could show a simulated banner but not needed as page itself has manage panel, but still friendly
+      setTimeout(() => {
+        const existingBanner = document.getElementById('dynamicCookieHint');
+        if (!existingBanner && !localStorage.getItem('quickroot_cookie_banner_hidden')) {
+          const banner = document.createElement('div');
+          banner.id = 'dynamicCookieHint';
+          banner.style.position = 'fixed';
+          banner.style.bottom = '20px';
+          banner.style.right = '20px';
+          banner.style.left = '20px';
+          banner.style.maxWidth = '420px';
+          banner.style.backgroundColor = '#ffffff';
+          banner.style.border = '1px solid #dadada';
+          banner.style.borderRadius = '1.5rem';
+          banner.style.padding = '1rem 1.5rem';
+          banner.style.boxShadow = '0 12px 24px rgba(0,0,0,0.05)';
+          banner.style.zIndex = '1000';
+          banner.innerHTML = `<div style="display:flex; align-items:center; gap:0.75rem; flex-wrap:wrap; justify-content:space-between;"><span style="font-size:0.9rem;">🌿 We use cookies to cultivate a better garden journal. <a href="cookies.html" style="color:#6b6b6b;">Learn more</a></span><div><button id="acceptEssHint" style="background:#eaeae8; border:none; border-radius:2rem; padding:0.4rem 1rem; margin-right:0.5rem; cursor:pointer;">Essentials only</button><button id="acceptAllHint" style="background:#2c2c2c; border:none; border-radius:2rem; padding:0.4rem 1rem; color:white; cursor:pointer;">Accept all</button></div></div>`;
+          document.body.appendChild(banner);
+          document.getElementById('acceptEssHint')?.addEventListener('click', () => { setConsent('essential'); banner.remove(); localStorage.setItem('quickroot_cookie_banner_hidden', 'true'); });
+          document.getElementById('acceptAllHint')?.addEventListener('click', () => { setConsent('all'); banner.remove(); localStorage.setItem('quickroot_cookie_banner_hidden', 'true'); });
+        }
+      }, 500);
+    }
+  })();
+</script>
+</body>
+</html>

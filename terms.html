@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Terms of Service | Quick Root Stories</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f5f5f4;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: #2c2c2c;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    /* header / navigation (mirroring main site) */
+    .site-header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e5e5;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.5rem;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .logo h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+      color: #3b3b3b;
+    }
+    .logo span {
+      font-weight: 400;
+      color: #6b6b6b;
+      font-size: 0.9rem;
+      display: block;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #4a4a4a;
+      margin-left: 1.2rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: #1f1f1f;
+      text-decoration: underline;
+    }
+
+    /* page hero (small variant) */
+    .page-hero {
+      background: #ffffff;
+      border-radius: 2rem;
+      margin: 1.5rem 0 2rem 0;
+      padding: 2rem 2rem;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03), 0 6px 12px -6px rgba(0,0,0,0.05);
+    }
+    .page-hero h2 {
+      font-size: 2.2rem;
+      font-weight: 500;
+      color: #2c2c2c;
+      border-left: 6px solid #a0a0a0;
+      padding-left: 1.2rem;
+    }
+    .page-hero p {
+      font-size: 1.1rem;
+      color: #4f4f4f;
+      margin-top: 1rem;
+    }
+
+    /* legal content styling */
+    .legal-content {
+      background: #ffffff;
+      border-radius: 1.5rem;
+      padding: 2rem 2rem;
+      border: 1px solid #ebebeb;
+      margin-bottom: 2rem;
+    }
+    .legal-content h2 {
+      font-size: 1.8rem;
+      margin: 1.5rem 0 1rem 0;
+      font-weight: 500;
+      color: #323232;
+      border-bottom: 2px solid #dddddd;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+    .legal-content h3 {
+      font-size: 1.4rem;
+      margin: 1.5rem 0 0.75rem 0;
+      color: #3e3e3e;
+    }
+    .legal-content p {
+      margin-bottom: 1rem;
+      color: #424242;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .legal-content ul, .legal-content ol {
+      margin: 1rem 0 1rem 1.8rem;
+      color: #424242;
+    }
+    .legal-content li {
+      margin-bottom: 0.4rem;
+    }
+    .inset-note {
+      background: #f9f9f9;
+      border-left: 6px solid #b0b0b0;
+      padding: 1rem 1.8rem;
+      margin: 1.5rem 0;
+      font-style: normal;
+      color: #4d4d4d;
+      border-radius: 0.75rem;
+    }
+    .last-updated {
+      font-size: 0.85rem;
+      color: #6b6b6b;
+      margin-top: 2rem;
+      border-top: 1px solid #ececec;
+      padding-top: 1.5rem;
+      text-align: right;
+    }
+    hr {
+      margin: 1rem 0;
+      border: none;
+      border-top: 1px solid #e2e2e2;
+    }
+
+    /* footer */
+    .footer {
+      background: #2a2a2a;
+      color: #e2e2e2;
+      border-top: 1px solid #414141;
+      margin-top: 3rem;
+      padding: 2rem 1.5rem;
+    }
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .footer-contact {
+      font-size: 1rem;
+      background: #3c3c3c;
+      padding: 0.6rem 1.2rem;
+      border-radius: 40px;
+    }
+    .footer-contact span {
+      font-weight: 500;
+      margin-right: 1.2rem;
+    }
+    .copyright {
+      font-size: 0.85rem;
+      opacity: 0.8;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    @media (max-width: 760px) {
+      .header-inner { flex-direction: column; text-align: center;}
+      .nav-links a { margin: 0 0.8rem; }
+      .legal-content { padding: 1.5rem; }
+      .page-hero { padding: 1.5rem; }
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">
+      <h1>Quick Root Stories</h1>
+      <span>rooted in wisdom · growing together</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="terms.html">Terms Of Privacy</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="cookies.html">Cookies Policy</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="container">
+  <div class="page-hero">
+    <h2>Terms of Service</h2>
+    <p>Welcome to Quick Root Stories — your trusted companion in grey & white gardening. These terms govern your use of our website, content, and community. By accessing or using our services, you agree to be bound by this agreement.</p>
+  </div>
+
+  <div class="legal-content">
+    <h2>1. Acceptance of Terms</h2>
+    <p>Quick Root Stories ("we," "us," or "our") provides this website and all related content, including articles, guides, images, newsletters, and community features (collectively, the "Service") subject to your acceptance of these Terms of Service ("Terms"). By visiting, browsing, or registering for any part of the Service, you acknowledge that you have read, understood, and agree to be legally bound by these Terms. If you do not agree with any part of these Terms, you must not use the Service.</p>
+    
+    <h2>2. Use of Content & Intellectual Property</h2>
+    <p>All materials displayed or available on Quick Root Stories — including but not limited to written articles, gardening tutorials, plant profiles, design diagrams, photography, graphics, logos, and cumulative textual works (exceeding 78,000 words of original horticultural knowledge) — are the exclusive property of Quick Root Stories or its content creators and are protected by international copyright, trademark, and other intellectual property laws.</p>
+    <p>You may view, download, and print content for personal, non-commercial use only, provided you retain all copyright and proprietary notices. You are expressly prohibited from:</p>
+    <ul>
+      <li>Republishing, redistributing, or syndicating substantial portions of our content without prior written consent.</li>
+      <li>Using any automated software, bots, or scraping tools to extract content for commercial or competitive purposes.</li>
+      <li>Modifying, creating derivative works, or framing our material without explicit permission.</li>
+    </ul>
+    <p>For permissions or licensing inquiries, please contact us at <strong>hello@quickrootstories.com</strong>.</p>
+
+    <div class="inset-note">
+      🌿 <strong>Grey & White Gardeners' Respect:</strong> Our extensive library — from silver foliage encyclopedias to historical white garden essays — is crafted with care. We encourage sharing short excerpts with proper attribution, but wholesale copying undermines the gardening community.
+    </div>
+
+    <h2>3. User Accounts & Community Conduct</h2>
+    <p>Certain areas of the Service (such as newsletters, comment sections, or future member forums) may require registration. You agree to provide accurate, current, and complete information and to maintain the security of your login credentials. You are solely responsible for any activity conducted through your account.</p>
+    <p>When interacting with our community, you agree not to:</p>
+    <ul>
+      <li>Post or transmit any content that is unlawful, harassing, defamatory, abusive, threatening, obscene, or otherwise objectionable.</li>
+      <li>Impersonate any person or entity, or falsely state your affiliation with Quick Root Stories.</li>
+      <li>Upload malicious code, viruses, or engage in any activity that disrupts the Service.</li>
+      <li>Infringe upon the intellectual property or privacy rights of others.</li>
+    </ul>
+    <p>We reserve the right to moderate, remove, or edit user contributions and to suspend or terminate accounts that violate these standards.</p>
+
+    <h2>4. Gardening Advice & Disclaimer</h2>
+    <p>Quick Root Stories provides educational and inspirational content about grey-white gardening, horticulture, landscape design, and related topics. While our team comprises experienced gardeners and writers, all information is offered in good faith and for general informational purposes only. Individual results may vary based on climate, soil conditions, plant provenance, and maintenance practices.</p>
+    <p><strong>No professional landscape or horticultural consultant relationship is formed</strong> through your use of the Service. You assume full responsibility for any actions taken based on our content, including plant selection, installation, chemical applications, or structural projects. We recommend consulting with local extension services or certified professionals for region-specific guidance.</p>
+    
+    <h2>5. Third-Party Links & Products</h2>
+    <p>Our articles and pages may contain links to external websites, nurseries, or affiliate partners. These links are provided for convenience and do not signify endorsement. We are not responsible for the content, privacy practices, or accuracy of any third-party resources. Any transactions or interactions you engage in with third parties are solely between you and the third party.</p>
+    <p>From time to time, we may participate in affiliate programs (e.g., gardening tools, books, or grey-foliage plants). If you purchase through such links, we may earn a small commission at no extra cost to you, which supports our content creation.</p>
+
+    <h2>6. Limitation of Liability</h2>
+    <p>To the fullest extent permitted by law, Quick Root Stories, its owners, contributors, and affiliates shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of, or inability to use, the Service. This includes but is not limited to personal injury, property damage, crop failure, loss of data, or any other intangible losses, even if advised of the possibility of such damages. Some jurisdictions do not allow the exclusion of certain warranties or limitations of liability, so the above limitations may not apply to you.</p>
+
+    <h2>7. Privacy & Data Collection</h2>
+    <p>Your privacy is important to us. Our collection and handling of personal information is governed by our <a href="privacy.html" style="text-decoration: underline; color:#4a4a4a;">Privacy Policy</a> and <a href="cookies.html" style="text-decoration: underline; color:#4a4a4a;">Cookies Policy</a>. By using the Service, you consent to the data practices described therein, including the use of cookies to enhance user experience and analyze site traffic.</p>
+
+    <h2>8. Modifications to Terms</h2>
+    <p>We may revise these Terms from time to time to reflect changes in the law, our Service, or industry practices. The "Last Updated" date at the bottom of this page indicates when changes were made. Continued use of Quick Root Stories after any modifications constitutes acceptance of the revised Terms. Material changes will be highlighted via site notification or email when appropriate.</p>
+
+    <h2>9. Termination & Suspension</h2>
+    <p>We reserve the right to suspend or terminate your access to the Service, without notice or liability, for any reason whatsoever, including without limitation if you breach these Terms. Upon termination, your right to use the Service will cease immediately. Provisions that by their nature should survive termination (including intellectual property provisions, disclaimers, and limitation of liability) shall remain in effect.</p>
+
+    <h2>10. Governing Law & Dispute Resolution</h2>
+    <p>These Terms shall be governed by and construed in accordance with the laws of the State of Colorado, without regard to its conflict of law provisions. Any dispute arising from or relating to these Terms or the Service shall be resolved exclusively in the state or federal courts located in Denver County, Colorado. You agree to waive any objection to personal jurisdiction and venue in such courts.</p>
+    
+    <div class="inset-note">
+      📖 <strong>Quick Root Stories Commitment:</strong> We believe in transparent, ethical gardening resources. If you have any concerns regarding these Terms or our content, please reach out to our support team — we're rooted in community.
+    </div>
+
+    <h2>11. Additional Terms for Downloads & Events</h2>
+    <p>If we offer downloadable resources (e.g., printable garden planners, e-books, or seasonal checklists) or host virtual workshops, those may be subject to supplemental terms. In the event of a conflict, the supplemental terms will govern for that specific activity.</p>
+    <p>You may not reproduce, resell, or distribute any downloadable materials for commercial purposes without written authorization. All free resources remain the copyrighted property of Quick Root Stories.</p>
+
+    <h2>12. Contact Information</h2>
+    <p>For questions regarding these Terms, please contact us at:</p>
+    <ul>
+      <li>Email: <strong>legal@quickrootstories.com</strong></li>
+      <li>Postal address: 127 Evergreen Lane, Garden Valley, CO 81226, United States</li>
+      <li>Phone: +1 (800) 455-ROOT (7668)</li>
+    </ul>
+
+    <div class="last-updated">
+      Last updated: March 30, 2025 | Version 2.1 – Grey & White Edition
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="copyright">
+      © 2025 Quick Root Stories — Rooted in wisdom, growing grey & white gardens.
+    </div>
+    <div class="footer-contact">
+      <span>📍 127 Evergreen Lane, Garden Valley, CO 81226</span>
+      <span>📞 +1 (800) 455-ROOT (7668)</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
